@@ -10,19 +10,22 @@ const menu = [
     id: 2,
     img: "./img/leaves.png",
     category: "leaves",
-    desc: "я второй"
+    desc: "я второй",
+    title: "title"
   },
   {
     id: 3,
     img: "./img/heart.png",
     category: "heart",
-    desc: "я третий"
+    desc: "я третий",
+    title: "title"
   },
   {
     id: 4,
     img: "./img/umberalla.png",
     category: "umberalla",
-    desc: "я четвертый"
+    desc: "я четвертый",
+    title: "title"
   },
 
 ];
@@ -32,7 +35,7 @@ const filterBtns = document.querySelectorAll('.filter-btn');
 
 //load items
 window.addEventListener("DOMContentLoaded", function () {
-  displayMenuItems(menu.item);
+  displayMenuItems(sectionCenter);
 });
 
 //filter items
@@ -56,7 +59,7 @@ filterBtns.forEach(function (btn) {
 
 
 function displayMenuItems(menuItems) {
-  let displayMenu = menuItems.map(function (item) {
+  let displayMenu = menuItems.map(item => {
     return `<div class="menu-item">
     <img class="icon" src="${item.img}" alt="id" width="100px">
     <h2 class="menu-item_title">${item.title}</h2>
@@ -66,6 +69,14 @@ function displayMenuItems(menuItems) {
 
   sectionCenter.innerHTML = displayMenu;
 };
+
+
+
+
+//////////////////////////////////////////////slider//////////////////////////////////////////
+
+
+
 
 
 const slides = document.querySelectorAll('.slide');
